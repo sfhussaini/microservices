@@ -31,7 +31,7 @@ spec:
         imagePullPolicy: IfNotPresent
         name: manageemployees
         ports:
-        - containerPort: 9090
+        - containerPort: 9999
           protocol: TCP
         resources: {}
         terminationMessagePath: /dev/termination-log
