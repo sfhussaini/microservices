@@ -27,7 +27,7 @@ spec:
         app: manageemployees-dplmnt
     spec:
       containers:
-      - image: localhost:5000/manageemployees:latest
+      - image: localhost:5000/manageemployees:${IMAGE_TAG}
         imagePullPolicy: IfNotPresent
         name: manageemployees
         ports:
