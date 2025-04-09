@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the built JAR file into the container Image
-COPY target/ManageEmployee-0.0.1-SNAPSHOT.jar ManageEmployee.jar
+COPY target/ManageEmployees-0.0.1-SNAPSHOT.jar ManageEmployees.jar
 
 # Expose the application port
 EXPOSE 9090
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "ManageEmployee.jar"]
+ENTRYPOINT ["java", "-jar", "ManageEmployees.jar"]
