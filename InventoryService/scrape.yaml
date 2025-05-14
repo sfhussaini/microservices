@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    meta.helm.sh/release-namespace: monitoring
+  name: prometheus-inventory-service
+  namespace: monitoring
+spec:
+  endpoints:
+  - path: /actuator/prometheus
+    port: 7070
+  namespaceSelector:
+    matchNames:
+    - monitoring
+    - default
+    - kafka
+  selector:
+    matchLabels:
+      app: inventory-service
+      self-monitor: "true"
