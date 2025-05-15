@@ -10,7 +10,7 @@ metadata:
   namespace: default
 spec:
   progressDeadlineSeconds: 600
-  replicas: 10
+  replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -27,7 +27,7 @@ spec:
         app: manageemployees-dplmnt
     spec:
       containers:
-      - image: localhost:5000/manageemployees:${IMAGE_TAG}
+      - image: localhost:5000/manageemployees:v1
         imagePullPolicy: IfNotPresent
         name: manageemployees
         ports:
